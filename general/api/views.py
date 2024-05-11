@@ -82,7 +82,7 @@ class PostViewSet(ModelViewSet):
         elif self.action == "retrieve":
             return PostRetrieveSerializer
         return PostCreateUpdateSerializer
-    
+
     def perform_update(self, serializer):
         instance = self.get_object()
 

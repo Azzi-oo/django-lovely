@@ -21,6 +21,9 @@ class Post(models.Model):
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self) -> str:
+        return f"({self.id}) {self.title}"
+
 
 class Comment(models.Model):
     body = models.TextField()
@@ -99,5 +102,3 @@ class Message(models.Model):
         related_name="messages",
     )
     created_at = models.DateTimeField(auto_now_add=True)
-
-
